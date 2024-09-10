@@ -29,8 +29,8 @@ useEffect(()=>{
     return(
         <>
         <input type="text" style={{width:"50%",marginTop:"2rem",height:"2rem"}} placeholder="Search for countries..." onChange={(e)=>filterName(e.target.value)}/>
-    <div className={style.mainDiv} >
-          {filteredData.map((flag)=>(<div className={style.countryCard} key={flag.cca3}>
+    <div className={style.countryCard} >
+          {filteredData.map((flag)=>(<div className={style.mainCard} key={flag.cca3}>
             <img src={flag.flags.png} alt={flag.name.common}  height={80} width={80} style={{paddingTop:"1rem"}}/>
             <p>{flag.name.common}</p>
         </div>))}
